@@ -19,14 +19,69 @@
         <article>
 
             <div class="carrossel">
-                <img src="#" alt="photos1" class="carrossel-items">
+                <img src="https://picsum.photos/700/400" alt="photos1" class="carrossel-items">
             </div>
 
         </article>
+  
+        <div class="timeline">
+            <div class="year" onmouseover="showEvent(1999)" onmouseout="hideEvent()">1999</div>
+            <div class="year" onmouseover="showEvent(2008)" onmouseout="hideEvent()">2008</div>
+            <div class="year" onmouseover="showEvent(2015)" onmouseout="hideEvent()">2015</div>
+            <div class="year" onmouseover="showEvent(2023)" onmouseout="hideEvent()">2023</div>
+        </div>
+        <div class="year-info"  id="event-box">a</div>
+
 
     </main>
     <section>
 
     </section>
+
+
+
+
+
+
+    <script>
+    const events = {
+      1999: {
+        year: "1999",
+        title: "O nascimento do termo IoT",
+        text: "Kevin Ashton usa o termo 'Internet das Coisas' pela primeira vez em uma palestra sobre sensores conectados à internet."
+      },
+      2008: {
+        year: "2008",
+        title: "A IoT começa a crescer",
+        text: "Pela primeira vez, o número de dispositivos conectados supera o número de pessoas no planeta."
+      },
+      2015: {
+        year: "2015",
+        title: "IoT nas casas",
+        text: "Dispositivos como Alexa e Google Home popularizam o uso doméstico de objetos conectados."
+      },
+      2023: {
+        year: "2023",
+        title: "Cidades Inteligentes",
+        text: "Soluções de IoT são integradas em larga escala a cidades, otimizando energia, trânsito e segurança."
+      }
+    };
+
+    function showEvent(year) {
+      const box = document.getElementById('event-box');
+      setTimeout(() => {
+        box.innerHTML = `<h1>${events[year].year}</h1><br><h2>${events[year].title}</h2><br><p>${events[year].text}</p>`;
+        box.style.opacity = 1;
+      }, 200);
+
+    }
+
+    function hideEvent() {
+      const box = document.getElementById('event-box');
+      setTimeout(() => {
+        box.style.opacity = 0;
+      }, 200);
+    }
+  </script>
 </body>
 </html>
