@@ -47,6 +47,7 @@
     text-shadow: 2px 2px 5px #082f3e;
 }
 
+/* 
 .menu-btn {
     border: none;
     border-radius: 50%;
@@ -64,9 +65,10 @@
 .menu-btn:hover {
     transform: scale(1.2);
     text-shadow: 0 0 8px #00bfff, 0 0 12px #00bfff;
-}
+} */
 
 /* header fim */
+
 .container-section {
     display: flex;
     width: 100vw;
@@ -76,51 +78,126 @@
     /* background-color: cyan; */
 }
 
-.section-1 {
+/* calc 1 começa -------------------------------- */
+.calc-container {
+    margin-top: 20px;
     display: flex;
     /* background-color: blue; */
     height: 100%;
-    width: 55%;
+    width: 50%;
     justify-content: center;
     align-items: center;
-    
+    padding: 10px;
 }
 
-.section-2{
+.calc {
     display: flex;
     flex-direction: column;
-    /* background-color: brown; */
-    height: 100%;
-    width: 40%;
-    font-size: 20px;
     justify-content: center;
     align-items: center;
-    margin-right: 45px ;
+    height: 100%;
+    width: 100%;
 }
 
-.section-2 img {
-    width: 220px;
-    height: 220px;
+.calc input, .calc button {
+    width: 40%;
+    height: 40%;
+    margin-top: 20px;
+    border-radius: 35px;
+    font-size: 20px;
+    border: 2.5px solid black;
+    transition: ease 0.5s;
+}
+
+.calc input:hover, .calc button:hover {
+    transform: scale(1.03);
 
 }
 
-.title-section2 {
-    font-size: 30px;
+.calc button {
+    background-color:#082f3e;
+    color: white;
 }
 
-.text {
-    margin-left: 15px;
-    margin-right: 15px;
+.calc input::placeholder {
+  text-align: center;
 }
 
+.calc label {
+    font-size: 40px;
+
+}
+
+#camp1, #camp2, #camp3,#resultado {
+    text-align: center;
+}
+/* calc 1 termina ----------------------------- */
+
+/* calc 2 começa ------------------------------ */
+
+.calc-container2 {
+    margin-top: 20px;
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.calcValue {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 15px;
+}
+
+.calcValue label {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.calcValue input, .calcValue button {
+    width: 400px;
+    height: 80px;
+    margin: 0 auto; 
+    border-radius: 35px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border: 2.5px solid black;
+    transition: ease 0.5s;
+}
+
+.calcValue button {
+    background-color: #082f3e;
+    color: white;
+}
+
+.calcValue input::placeholder {
+    text-align: center;
+}
+
+#Consumo, #Valor, #Tarifa {
+    text-align: center;
+}
+
+.calcValue input:hover, .calcValue button:hover {
+    transform: scale(1.03);
+}
+
+/* calc 2 termina -------------------- */
+
+/* carrossel começo------------------------------- */
 
 .carrossel {
     height: 100%;
     width: 100%;
 
 }
-/* carrossel começo------------------------------- */
-    .container-slider {
+
+.container-slider {
     display: flex;
     width: 100%;
     height: 100%;

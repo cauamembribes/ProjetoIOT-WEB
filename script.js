@@ -38,3 +38,28 @@ btnPrev.addEventListener('click', prevSlider)
 setInterval(nextSlider, 7500);
 
 /* ---------------------------------------------------- */
+
+ function Calcular() {
+
+let potencia = parseFloat(document.getElementById('camp1').value);
+let horas = parseFloat(document.getElementById('camp2').value);
+let dias = parseFloat(document.getElementById('camp3').value);
+let resultado;
+
+    resultado = (potencia*horas*dias)/1000;
+
+
+    document.getElementById('resultado').value = resultado + " Consumo (KwH)";
+}
+
+    function CalcularTarifa(){
+        let Consumo = parseFloat(document.getElementById('Consumo').value);
+        let Tarifa = parseFloat(document.getElementById('Tarifa').value);
+
+        valor = Consumo * Tarifa;
+
+        document.getElementById('Valor').value = "R$ " + valor;
+
+    }
+
+
